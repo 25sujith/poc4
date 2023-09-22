@@ -1,0 +1,325 @@
+root@LAPTOP-NML3397S:~# pyspark
+/usr/bin/env: ‘bash\r’: No such file or directory
+root@LAPTOP-NML3397S:~# sudo su - hadoopusr
+hadoopusr@LAPTOP-NML3397S:~$ pyspark
+Python 3.8.10 (default, Mar 13 2023, 10:26:41)
+[GCC 9.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+23/09/22 11:34:56 WARN Utils: Your hostname, LAPTOP-NML3397S resolves to a loopback address: 127.0.1.1; using 172.19.149.116 instead (on interface eth0)
+23/09/22 11:34:56 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.metastore.wm.default.pool.size does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.task.scheduler.preempt.independent does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.output.format.arrow does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.tez.llap.min.reducer.per.executor does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.arrow.root.allocator.limit does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.vectorized.use.checked.expressions does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.tez.dynamic.semijoin.reduction.for.mapjoin does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.vectorized.complex.types.enabled does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.server2.wm.worker.threads does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.repl.partitions.dump.parallelism does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.metastore.uri.selection does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.strict.checks.no.partition.filter does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.tez.dynamic.semijoin.reduction.for.dpp.factor does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.stats.filter.in.min.ratio does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.metastore.client.cache.initial.capacity does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.stats.ndv.estimate.percent does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.server2.webui.cors.allowed.methods does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.optimize.joinreducededuplication does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.metastore.client.cache.enabled does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.stats.fetch.bitvector does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.disable.unsafe.external.table.operations does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.materializedview.rewriting.incremental does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.server2.materializedviews.registry.impl does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.metastore.event.db.notification.api.auth does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.exec.orc.delta.streaming.optimizations.enabled does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.stats.ndv.algo does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.spark.job.max.tasks does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.msck.repair.batch.max.retries does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.prewarm.spark.timeout does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.optimize.update.table.properties.from.serde.list does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.plugin.client.num.threads does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.test.bucketcodec.version does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.query.reexecution.enabled does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.materializedview.rewriting.time.window does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.query.reexecution.stats.cache.batch.size does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.server2.webui.cors.allowed.headers does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.join.inner.residual does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.server2.active.passive.ha.enable does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.io.trace.always.dump does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.query.reexecution.stats.persist.scope does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.mm.allow.originals does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.compactor.compact.insert.only does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.txn.xlock.iow does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.spark.rsc.conf.list does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.cache.defaultfs.only.native.fileid does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.spark.optimize.shuffle.serde does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.testing.remove.logs does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.distcp.privileged.doAs does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.strict.checks.orderby.no.limit does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.metastore.client.cache.expiry.time does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.io.allocator.defrag.headroom does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.notification.event.consumers does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.vectorized.input.format.supports.enabled does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.metastore.client.cache.max.capacity does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.repl.dumpdir.clean.freq does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.spark.use.ts.stats.for.mapjoin does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.repl.dump.include.acid.tables does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.server2.webui.use.pam does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.query.reexecution.max.count does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.io.share.object.pools does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.optimize.update.table.properties.from.serde does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.service.metrics.codahale.reporter.classes does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.tez.session.events.print.summary does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.io.vrb.queue.limit.base does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.mm.avoid.s3.globstatus does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.repl.replica.functions.root.dir does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.query.results.cache.max.entry.lifetime does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.server2.limit.connections.per.user does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.server2.thrift.http.compression.enabled does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.vectorized.execution.ptf.enabled does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.optimize.shared.work.extended does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.vectorized.row.identifier.enabled does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.query.reexecution.always.collect.operator.stats does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.repl.dumpdir.ttl does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.local.time.zone does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.server2.tez.wm.am.registry.timeout does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.server2.active.passive.ha.registry.namespace does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.create.as.insert.only does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.mapjoin.memory.oversubscribe.factor does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.arrow.batch.size does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.notification.sequence.lock.retry.sleep.interval does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.repl.approx.max.load.tasks does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.query.results.cache.enabled does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.legacy.schema.for.all.serdes does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.tez.dag.status.check.interval does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.druid.bitmap.type does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.spark.dynamic.partition.pruning.map.join.only does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.memory.oversubscription.max.executors.per.query does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.io.trace.size does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.plugin.rpc.num.handlers does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.server2.wm.allow.any.pool.via.jdbc does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.vectorized.groupby.complex.types.enabled does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.avro.timestamp.skip.conversion does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.query.results.cache.nontransactional.tables.enabled does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.stats.correlated.multi.key.joins does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.metastore.db.type does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.streaming.auto.flush.check.interval.size does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.zookeeper.connection.timeout does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.query.reexecution.strategies does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.server2.limit.connections.per.user.ipaddress does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.mapjoin.memory.monitor.check.interval does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.optimize.shared.work does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.stats.estimate does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.io.allocator.discard.method does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.tez.cartesian-product.enabled does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.notification.sequence.lock.max.retries does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.heap.memory.monitor.usage.threshold does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.privilege.synchronizer.interval does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.vectorized.adaptor.suppress.evaluate.exceptions does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.materializedview.rebuild.incremental does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.query.results.cache.max.entry.size does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.spark.stage.max.tasks does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.testing.short.logs does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.streaming.auto.flush.enabled does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.spark.explain.user does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.server2.operation.log.cleanup.delay does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.repl.dump.metadata.only does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.optimize.countdistinct does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.auto.convert.join.shuffle.max.size does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.plugin.acl does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.metastore.schema.info.class does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.server2.tez.queue.access.check does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.external.splits.temp.table.storage.format does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.io.row.wrapper.enabled does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.constraint.notnull.enforce does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.cli.print.escape.crlf does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.trigger.validation.interval does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.server2.webui.cors.allowed.origins does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.server2.limit.connections.per.ipaddress does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.external.splits.order.by.force.single.split does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.metastore.client.cache.stats.enabled does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.notification.event.poll.interval does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.transactional.concatenate.noblock does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.materializedview.rewriting.strategy does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.vectorized.if.expr.mode does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.exim.test.mode does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.query.results.cache.directory does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.query.results.cache.wait.for.pending.results does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.remove.orderby.in.subquery does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.tez.bmj.use.subcache does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.io.vrb.queue.limit.min does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.server2.wm.pool.metrics does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.repl.add.raw.reserved.namespace does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.resource.use.hdfs.location does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.stats.num.nulls.estimate.percent does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.io.acid does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.zk.sm.session.timeout does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.vectorized.ptf.max.memory.buffering.batch.count does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.task.scheduler.am.registry does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.druid.overlord.address.default does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.optimize.remove.sq_count_check does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.server2.webui.enable.cors does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.vectorized.row.serde.inputformat.excludes does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.query.reexecution.stats.cache.size does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.combine.equivalent.work.optimization does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.lock.query.string.max.length does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.llap.io.track.cache.usage does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.use.orc.codec.pool does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.query.results.cache.max.size does not exist
+23/09/22 11:34:59 WARN HiveConf: HiveConf of name hive.repl.bootstrap.dump.open.txn.timeout does not exist
+23/09/22 11:34:59 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /__ / .__/\_,_/_/ /_/\_\   version 3.4.0
+      /_/
+
+Using Python version 3.8.10 (default, Mar 13 2023 10:26:41)
+Spark context Web UI available at http://172.19.149.116:4040
+Spark context available as 'sc' (master = local[*], app id = local-1695362701883).
+SparkSession available as 'spark'.
+>>> from pyspark.sql import SparkSession
+>>> from pyspark.sql.functions import col
+>>> data = spark.read.option("header", "true").csv("hdfs://localhost:9000/user/hadoopusr/CreditCard.csv")
+>>> data1 = spark.read.option("header", "true").csv("hdfs://localhost:9000/user/hadoopusr/CityList.csv")
+>>> data2 = spark.read.option("header", "true").csv("hdfs://localhost:9000/user/hadoopusr/ CountryList.csv")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/hadoopusr/spark/python/pyspark/sql/readwriter.py", line 727, in csv
+    return self._df(self._jreader.csv(self._spark._sc._jvm.PythonUtils.toSeq(path)))
+  File "/home/hadoopusr/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+  File "/home/hadoopusr/spark/python/pyspark/errors/exceptions/captured.py", line 175, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.AnalysisException: [PATH_NOT_FOUND] Path does not exist: hdfs://localhost:9000/user/hadoopusr/ CountryList.csv.
+>>> data2 = spark.read.option("header", "true").csv("hdfs://localhost:9000/user/hadoopusr/CountryList.csv")
+>>> data.show(5)
+23/09/22 11:36:44 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
++----+------------+------------+-----------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------+-----+-------+
+|Time|          V1|          V2|         V3|          V4|          V5|          V6|          V7|          V8|          V9|         V10|
+V11|         V12|         V13|         V14|         V15|         V16|         V17|         V18|         V19|         V20|         V21|         V22|         V23|         V24|         V25|         V26|         V27|         V28|Amount|Class|     id|
++----+------------+------------+-----------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------+-----+-------+
+|   0|-1.359807134|-0.072781173|2.536346738| 1.378155224| -0.33832077| 0.462387778| 0.239598554| 0.098697901|  0.36378697| 0.090794172|-0.551599533|-0.617800856|-0.991389847|-0.311169354| 1.468176972|-0.470400525| 0.207971242|  0.02579058|  0.40399296| 0.251412098|-0.018306778| 0.277837576| -0.11047391| 0.066928075| 0.128539358|-0.189114844| 0.133558377|-0.021053053|149.62|    0|3039162|
+|   0| 1.191857111| 0.266150712|0.166480113| 0.448154078| 0.060017649|-0.082360809|-0.078802983| 0.085101655|-0.255425128|-0.166974414| 1.612726661| 1.065235311| 0.489095016|-0.143772296| 0.635558093| 0.463917041|-0.114804663| -0.18336127|-0.145783041|-0.069083135|-0.225775248|-0.638671953| 0.101288021|-0.339846476| 0.167170404| 0.125894532|-0.008983099| 0.014724169|  2.69|    0|3039163|
+|   1|-1.358354062|-1.340163075|1.773209343| 0.379779593|-0.503198133| 1.800499381| 0.791460956| 0.247675787|-1.514654323| 0.207642865| 0.624501459| 0.066083685| 0.717292731|-0.165945923| 2.345864949|-2.890083194| 1.109969379|-0.121359313|-2.261857095| 0.524979725| 0.247998153| 0.771679402| 0.909412262|-0.689280956|-0.327641834|-0.139096572|-0.055352794|-0.059751841|378.66|    0|3039604|
+|   1|-0.966271712|-0.185226008| 1.79299334|-0.863291275| -0.01030888| 1.247203168|  0.23760894| 0.377435875|-1.387024063|-0.054951922|-0.226487264| 0.178228226|  0.50775687|-0.287923745|-0.631418118|-1.059647245|-0.684092786| 1.965775003| -1.23262197|-0.208037781|-0.108300452| 0.005273597|-0.190320519|-1.175575332| 0.647376035|-0.221928844| 0.062722849| 0.061457629| 123.5|    0|3039676|
+|   2|-1.158233093| 0.877736755|1.548717847| 0.403033934|-0.407193377| 0.095921462| 0.592940745|-0.270532677| 0.817739308| 0.753074432|-0.822842878|  0.53819555| 1.345851593|-1.119669835|  0.17512113|-0.451449183|-0.237033239|-0.038194787| 0.803486925|  0.40854236|-0.009430697| 0.798278495| -0.13745808| 0.141266984|-0.206009588| 0.502292224|  0.21942223| 0.215153147| 69.99|    0|3039678|
++----+------------+------------+-----------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------+-----+-------+
+only showing top 5 rows
+
+>>> data.createOrReplaceTempView("transactions")
+>>> data1.createOrReplaceTempView("locations")
+>>> data2.createOrReplaceTempView("CountryList")
+>>> joineddata = spark.sql("""
+...     SELECT transactions.id AS transaction_id,transactions.Time,transactions.Class,transactions.Amount,locations.id AS location_id,locations.name,locations.alpha2
+...     FROM transactions
+...     INNER JOIN locations
+...     ON transactions.id = locations.id
+... """)
+>>> joineddata.show()
++--------------+----+-----+------+-----------+--------------------+------+
+|transaction_id|Time|Class|Amount|location_id|                name|alpha2|
++--------------+----+-----+------+-----------+--------------------+------+
+|       3039162|   0|    0|149.62|    3039162| Sant Julià de Lòria|    AD|
+|       3039163|   0|    0|  2.69|    3039163| Sant Julià de Lòria|    AD|
+|       3039604|   1|    0|378.66|    3039604|      Pas de la Casa|    AD|
+|       3039676|   1|    0| 123.5|    3039676|              Ordino|    AD|
+|       3039678|   2|    0| 69.99|    3039678|              Ordino|    AD|
+|       3039819|   2|    0|  3.67|    3039819|            Molleres|    AD|
+|       3040051|   4|    0|  4.99|    3040051|        les Escaldes|    AD|
+|       3040131|   7|    0|  40.8|    3040131|          La Massana|    AD|
+|       3040132|   7|    0|  93.2|    3040132|          la Massana|    AD|
+|       3040684|   9|    0|  3.68|    3040684|              Encamp|    AD|
+|       3040686|  10|    0|   7.8|    3040686|              Encamp|    AD|
+|       3041203|  10|    0|  9.99|    3041203|             Canillo|    AD|
+|       3041204|  10|    0| 121.5|    3041204|             Canillo|    AD|
+|       3041519|  11|    0|  27.5|    3041519|             Arinsal|    AD|
+|       3041563|  12|    0|  58.8|    3041563|    Andorra la Vella|    AD|
+|       3041565|  12|    0| 15.99|    3041565|Principality of A...|    AD|
+|       3041566|  12|    0| 12.99|    3041566|    Andorra la Vella|    AD|
+|       3338529|  13|    0|  0.89|    3338529|  Escaldes-Engordany|    AD|
+|        363243|  14|    0|  46.8|     363243|             Sarandë|    AL|
+|        363320|  15|    0|     5|     363320|            Konispol|    AL|
++--------------+----+-----+------+-----------+--------------------+------+
+only showing top 20 rows
+
+>>> joineddata.createOrReplaceTempView("joineddata")
+>>> fraudulentactivitiesquery = """
+ECT
+... SELECT
+...   transaction_id,
+...   name,
+...   alpha2,
+...   from_unixtime(Time) as timestamp,
+...   Amount,
+...   Class
+... FROM joineddata
+... WHERE Class = 1
+... """
+>>> fraudulent_activities = spark.sql(fraudulentactivitiesquery)
+>>> fraudulent_activities.show()
++--------------+--------------------+------+-------------------+------+-----+
+|transaction_id|                name|alpha2|          timestamp|Amount|Class|
++--------------+--------------------+------+-------------------+------+-----+
+|       2761377|            Wielands|    AT|1970-01-01 05:36:46|     0|    1|
+|       2762315|         Völkermarkt|    AT|1970-01-01 05:37:52|   529|    1|
+|       2787388|Saint-Josse-ten-N...|    BE|1970-01-01 06:44:22|239.93|    1|
+|        725682| Obshtina Valchedram|    BG|1970-01-01 07:26:26|    59|    1|
+|        727522|       Obshtina Ruse|    BG|1970-01-01 07:35:19|     1|    1|
+|        727524|         Oblast Ruse|    BG|1970-01-01 07:35:26|     1|    1|
+|        727551|    Obshtina Rudozem|    BG|1970-01-01 07:35:35|     1|    1|
+|        727564|              Rozovo|    BG|1970-01-01 07:35:43|     1|    1|
+|        727597|      Obshtina Roman|    BG|1970-01-01 07:35:51|     1|    1|
+|        728321|         Perushtitsa|    BG|1970-01-01 07:36:50|     1|    1|
+|        728415|           Partizani|    BG|1970-01-01 07:37:52|     1|    1|
+|        728676|         Obrochishte|    BG|1970-01-01 07:39:00|     1|    1|
+|        729145|               Mesta|    BG|1970-01-01 07:41:31|     1|    1|
+|        729879|   Obshtina Krushari|    BG|1970-01-01 07:44:50|     1|    1|
+|        730127|            Kosharna|    BG|1970-01-01 07:46:09|     1|    1|
+|        730836|Obshtina Ivaylovgrad|    BG|1970-01-01 07:50:08|     1|    1|
+|        730840|         Ivan-Vazovo|    BG|1970-01-01 07:50:15|     1|    1|
+|        730987|            Gŭlŭbovo|    BG|1970-01-01 07:50:51|     1|    1|
+|        731453|       Dolni Chiflik|    BG|1970-01-01 07:52:08|     1|    1|
+|        731947|             Dragovo|    BG|1970-01-01 07:53:34|     1|    1|
++--------------+--------------------+------+-------------------+------+-----+
+only showing top 20 rows
+
+>>> fraudulent_activities.createOrReplaceTempView("fraudulentactivities")
+>>> fraudulent_activities1 = spark.sql("""
+...     SELECT fraudulentactivities.transaction_id, fraudulentactivities.timestamp, fraudulentactivities.Class,
+...            fraudulentactivities.Amount, fraudulentactivities.name, fraudulentactivities.alpha2 AS fraudulentactivities_alpha2,
+...            CountryList.alpha2 AS CountryList_alpha2, CountryList.companyen
+...     FROM  fraudulentactivities
+...     JOIN  CountryList
+  ON  ...     ON  fraudulentactivities.alpha2=CountryList.alpha2
+... """)
+>>> fraudulent_activities1.show()
++--------------+-------------------+-----+------+--------------------+---------------------------+------------------+---------+
+|transaction_id|          timestamp|Class|Amount|                name|fraudulentactivities_alpha2|CountryList_alpha2|companyen|
++--------------+-------------------+-----+------+--------------------+---------------------------+------------------+---------+
+|       2761377|1970-01-01 05:36:46|    1|     0|            Wielands|                         AT|                AT|  Austria|
+|       2762315|1970-01-01 05:37:52|    1|   529|         Völkermarkt|                         AT|                AT|  Austria|
+|       2787388|1970-01-01 06:44:22|    1|239.93|Saint-Josse-ten-N...|                         BE|                BE|  Belgium|
+|        725682|1970-01-01 07:26:26|    1|    59| Obshtina Valchedram|                         BG|                BG| Bulgaria|
+|        727522|1970-01-01 07:35:19|    1|     1|       Obshtina Ruse|                         BG|                BG| Bulgaria|
+|        727524|1970-01-01 07:35:26|    1|     1|         Oblast Ruse|                         BG|                BG| Bulgaria|
+|        727551|1970-01-01 07:35:35|    1|     1|    Obshtina Rudozem|                         BG|                BG| Bulgaria|
+|        727564|1970-01-01 07:35:43|    1|     1|              Rozovo|                         BG|                BG| Bulgaria|
+|        727597|1970-01-01 07:35:51|    1|     1|      Obshtina Roman|                         BG|                BG| Bulgaria|
+|        728321|1970-01-01 07:36:50|    1|     1|         Perushtitsa|                         BG|                BG| Bulgaria|
+|        728415|1970-01-01 07:37:52|    1|     1|           Partizani|                         BG|                BG| Bulgaria|
+|        728676|1970-01-01 07:39:00|    1|     1|         Obrochishte|                         BG|                BG| Bulgaria|
+|        729145|1970-01-01 07:41:31|    1|     1|               Mesta|                         BG|                BG| Bulgaria|
+|        729879|1970-01-01 07:44:50|    1|     1|   Obshtina Krushari|                         BG|                BG| Bulgaria|
+|        730127|1970-01-01 07:46:09|    1|     1|            Kosharna|                         BG|                BG| Bulgaria|
+|        730836|1970-01-01 07:50:08|    1|     1|Obshtina Ivaylovgrad|                         BG|                BG| Bulgaria|
+|        730840|1970-01-01 07:50:15|    1|     1|         Ivan-Vazovo|                         BG|                BG| Bulgaria|
+|        730987|1970-01-01 07:50:51|    1|     1|            Gŭlŭbovo|                         BG|                BG| Bulgaria|
+|        731453|1970-01-01 07:52:08|    1|     1|       Dolni Chiflik|                         BG|                BG| Bulgaria|
+|        731947|1970-01-01 07:53:34|    1|     1|             Dragovo|                         BG|                BG| Bulgaria|
++--------------+-------------------+-----+------+--------------------+---------------------------+------------------+---------+
+only showing top 20 rows
+
+>>> fraudulent_activities1.write.mode("overwrite").option("header",True).csv("hdfs://localhost:9000/fraudulent_activities1")

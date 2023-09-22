@@ -1,0 +1,236 @@
+root@LAPTOP-NML3397S:~# mysql -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.34-0ubuntu0.20.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| frudtranction      |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sujith             |
+| sys                |
++--------------------+
+6 rows in set (0.03 sec)
+
+mysql> use frudtranction;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++-------------------------+
+| Tables_in_frudtranction |
++-------------------------+
+| citylist                |
+| citylist1               |
+| countrylist             |
+| transactions            |
++-------------------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from  citylist1 limit 5;
++--------+----------------+--------+-----+---------+
+| id     | name           | alpha2 | lon | lat     |
++--------+----------------+--------+-----+---------+
+| 145971 | Xylotymbou     |        |   0 | 33.7406 |
+| 146189 | Pérgamos       |        |   0 | 33.7083 |
+| 146451 | Kolossi        |        |   0 | 32.9292 |
+| 146839 | Akrotiri       |        |   0 | 32.9583 |
+| 146862 | Prishibinskoye |        |   0 | 48.5936 |
++--------+----------------+--------+-----+---------+
+5 rows in set (0.01 sec)
+
+mysql> select * from countrylist limit 5;
++-----------------------+-----------------+--------+
+| companyen             | country_numeric | alpha2 |
++-----------------------+-----------------+--------+
+| アンドラ              |               0 | 20     |
+| アルバニア            |               0 | 8      |
+| アルメニア            |               0 | 51     |
+| オーストリア          |               0 | 40     |
+| オーランド諸島        |               0 | 24     |
++-----------------------+-----------------+--------+
+5 rows in set (0.00 sec)
+
+mysql> DROP TABLE  countrylist;
+Query OK, 0 rows affected (0.13 sec)
+
+mysql> DROP TABLE  citylist1;
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> select * from transactionst limit 5;
+ERROR 1146 (42S02): Table 'frudtranction.transactionst' doesn't exist
+mysql> select * from  transactions limit 5;
++----+------+------------+-----------+-----------+-----------+------------+-----------+-----------+-----------+------------+-----------+-----------+-----------+-----------+-----------+-----------+------------+-----------+-----------+------------+------------+-----------+-----------+-----------+-----------+------------+------------+------------+--------+--------+-------+
+| id | Time | V1         | V2        | V3        | V4        | V5         | V6        | V7        | V8        | V9         | V10       | V11       | V12       | V13       | V14       | V15       | V16        | V17       | V18       | V19        | V20        | V21       | V22       | V23       | V24       | V25        | V26        | V27        | V28    | Amount | Class |
++----+------+------------+-----------+-----------+-----------+------------+-----------+-----------+-----------+------------+-----------+-----------+-----------+-----------+-----------+-----------+------------+-----------+-----------+------------+------------+-----------+-----------+-----------+-----------+------------+------------+------------+--------+--------+-------+
+|  1 |   -1 | -0.0727812 |   2.53635 |   1.37816 | -0.338321 |   0.462388 |  0.239599 | 0.0986979 |  0.363787 |  0.0907942 |   -0.5516 | -0.617801 |  -0.99139 | -0.311169 |   1.46818 | -0.470401 |   0.207971 | 0.0257906 |  0.403993 |   0.251412 | -0.0183068 |  0.277838 | -0.110474 | 0.0669281 |  0.128539 |  -0.189115 |   0.133558 | -0.0210531 | 149.62 |   0.00 |   127 |
+|  2 |    1 |   0.266151 |   0.16648 |  0.448154 | 0.0600176 | -0.0823608 | -0.078803 | 0.0851017 | -0.255425 |  -0.166974 |   1.61273 |   1.06524 |  0.489095 | -0.143772 |  0.635558 |  0.463917 |  -0.114805 | -0.183361 | -0.145783 | -0.0690831 |  -0.225775 | -0.638672 |  0.101288 | -0.339846 |   0.16717 |   0.125895 | -0.0089831 |  0.0147242 |   2.69 |   0.00 |   127 |
+|  4 |    1 |   0.141004 | 0.0453708 |   1.20261 |  0.191881 |   0.272708 | -0.005159 | 0.0812129 |   0.46496 | -0.0992543 |  -1.41691 | -0.153826 | -0.751063 |  0.167372 | 0.0501436 | -0.443587 | 0.00282051 | -0.611987 | -0.045575 |  -0.219633 |  -0.167716 |  -0.27071 | -0.154104 | -0.780055 |  0.750137 |  -0.257237 |  0.0345074 | 0.00516777 |   4.99 |   0.00 |   127 |
+|  7 |   -1 |    1.41796 |   1.07438 | -0.492199 |  0.948934 |   0.428118 |   1.12063 |  -3.80786 |  0.615375 |    1.24938 | -0.619468 |  0.291474 |   1.75796 |  -1.32387 |  0.686132 | -0.076127 |   -1.22213 | -0.358222 |  0.324505 |  -0.156742 |    1.94347 |  -1.01545 | 0.0575035 | -0.649709 | -0.415267 | -0.0516343 |   -1.20692 |   -1.08534 |   40.8 |   0.00 |   127 |
+|  9 |    0 |    1.11959 |   1.04437 | -0.222187 |  0.499361 |  -0.246761 |  0.651583 | 0.0695386 | -0.736727 |  -0.366846 |   1.01761 |   0.83639 |   1.00684 | -0.443523 |  0.150219 |  0.739453 |   -0.54098 |  0.476677 |  0.451773 |   0.203711 |  -0.246914 | -0.633753 | -0.120794 |  -0.38505 | -0.069733 |  0.0941988 |   0.246219 |  0.0830757 |   3.68 |   0.00 |   127 |
++----+------+------------+-----------+-----------+-----------+------------+-----------+-----------+-----------+------------+-----------+-----------+-----------+-----------+-----------+-----------+------------+-----------+-----------+------------+------------+-----------+-----------+-----------+-----------+------------+------------+------------+--------+--------+-------+
+5 rows in set (0.01 sec)
+
+mysql> show tables;
++-------------------------+
+| Tables_in_frudtranction |
++-------------------------+
+| citylist                |
+| transactions            |
++-------------------------+
+2 rows in set (0.01 sec)
+
+mysql> CREATE TABLE location_data (
+    ->     id VARCHAR(255),
+    ->     name VARCHAR(255),
+    ->     state VARCHAR(255),
+    ->     alpha2 VARCHAR(255),
+    ->     lon VARCHAR(255),
+    ->     lat VARCHAR(255)
+    -> );
+Query OK, 0 rows affected (0.23 sec)
+
+mysql> CREATE TABLE company_data (
+    ->     companyjp VARCHAR(255),
+    ->     companyen VARCHAR(255),
+    ->     numeric VARCHAR(255),
+    ->   alpha3    alpha3 VARCHAR(255),
+    ->     alpha2 VARCHAR(255),
+    ->     location VARCHAR(255),
+    ->     subdivision VARCHAR(255)
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'numeric VARCHAR(255),
+    alpha3 VARCHAR(255),
+    alpha2 VARCHAR(255),
+    loca' at line 4
+mysql> CREATE TABLE company_data (
+    ->     companyjp VARCHAR(255),
+    ->     companyen VARCHAR(255),
+    ->     numeric_code VARCHAR(255),
+    ->     alpha3 VARCHAR(255),
+    ->     alpha2 VARCHAR(255),
+    ->     location VARCHAR(255),
+    ->     subdivision VARCHAR(255)
+    -> );
+Query OK, 0 rows affected (0.16 sec)
+
+mysql> select * from company_data limit 5;
+Empty set (0.01 sec)
+
+mysql> LOAD DATA LOCAL INFILE  '/home/hadoopusr/ CountryList.csv' INTO TABLE company_data FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNO
+RE 1 ROWS;
+ERROR 2 (HY000): File '/home/hadoopusr/ CountryList.csv' not found (OS errno 2 - No such file or directory)
+mysql> LOAD DATA LOCAL INFILE  '/home/hadoopusr/CountryList.csv' INTO TABLE company_data FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNOR
+E 1 ROWS;
+Query OK, 53 rows affected, 2 warnings (0.04 sec)
+Records: 53  Deleted: 0  Skipped: 0  Warnings: 2
+
+mysql>  select * from company_data limit 5;
++-----------------------+----------------+--------------+--------+--------+--------------------+----------------+
+| companyjp             | companyen      | numeric_code | alpha3 | alpha2 | location           | subdivision    |
++-----------------------+----------------+--------------+--------+--------+--------------------+----------------+
+ |アンドラ              | Andorra        | 20           | AND    | AD     | 西ヨーロッパ       | ISO 3166-2:AD
+ |アルバニア            | Albania        | 8            | ALB    | AL     | 東ヨーロッパ       | ISO 3166-2:AL
+ |アルメニア            | Armenia        | 51           | ARM    | AM     | 東ヨーロッパ       | ISO 3166-2:AM
+ |オーストリア          | Austria        | 40           | AUT    | AT     | 東ヨーロッパ       | ISO 3166-2:AT
+ |オーランド諸島        | Åland Islands  | 248          | ALA    | AX     | 北ヨーロッパ       | ISO 3166-2:AX
++-----------------------+----------------+--------------+--------+--------+--------------------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> LOAD DATA LOCAL INFILE  '/home/hadoopusr/CityList.csv' INTO TABLE  company_data FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE
+1 ROWS;
+Query OK, 116214 rows affected, 65535 warnings (2.66 sec)
+Records: 116214  Deleted: 0  Skipped: 0  Warnings: 116021
+
+mysql>  select * from company_data limit 5;
++-----------------------+----------------+--------------+--------+--------+--------------------+----------------+
+| companyjp             | companyen      | numeric_code | alpha3 | alpha2 | location           | subdivision    |
++-----------------------+----------------+--------------+--------+--------+--------------------+----------------+
+ |アンドラ              | Andorra        | 20           | AND    | AD     | 西ヨーロッパ       | ISO 3166-2:AD
+ |アルバニア            | Albania        | 8            | ALB    | AL     | 東ヨーロッパ       | ISO 3166-2:AL
+ |アルメニア            | Armenia        | 51           | ARM    | AM     | 東ヨーロッパ       | ISO 3166-2:AM
+ |オーストリア          | Austria        | 40           | AUT    | AT     | 東ヨーロッパ       | ISO 3166-2:AT
+ |オーランド諸島        | Åland Islands  | 248          | ALA    | AX     | 北ヨーロッパ       | ISO 3166-2:AX
++-----------------------+----------------+--------------+--------+--------+--------------------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> DROP TABLE company_data;
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> LOAD DATA LOCAL INFILE  '/home/hadoopusr/CountryList.csv' INTO TABLE company_data FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
+ERROR 1146 (42S02): Table 'frudtranction.company_data' doesn't exist
+mysql> CREATE TABLE company_data (
+    ->     companyjp VARCHAR(255),
+    ->     companyen VARCHAR(255),
+    ->     numeric VARCHAR(255),
+    ->     alpha3 VARCHAR(255),
+    ->     alpha2 VARCHAR(255),
+    ->     location VARCHAR(255),
+    ->     subdivision VARCHAR(255)
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'numeric VARCHAR(255),
+    alpha3 VARCHAR(255),
+    alpha2 VARCHAR(255),
+    loca' at line 4
+mysql> CREATE TABLE company_data (
+    ->     companyjp VARCHAR(255),
+    ->     companyen VARCHAR(255),
+    ->     numeric_code VARCHAR(255),
+    ->     alpha3 VARCHAR(255),
+    ->     alpha2 VARCHAR(255),
+    ->     location VARCHAR(255),
+    ->     subdivision VARCHAR(255)
+    -> );
+Query OK, 0 rows affected (0.11 sec)
+
+mysql>  LOAD DATA LOCAL INFILE  '/home/hadoopusr/CountryList.csv' INTO TABLE company_data FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
+Query OK, 53 rows affected, 2 warnings (0.04 sec)
+Records: 53  Deleted: 0  Skipped: 0  Warnings: 2
+
+mysql> select * from company_data limit 5;
++-----------------------+----------------+--------------+--------+--------+--------------------+----------------+
+| companyjp             | companyen      | numeric_code | alpha3 | alpha2 | location           | subdivision    |
++-----------------------+----------------+--------------+--------+--------+--------------------+----------------+
+ |アンドラ              | Andorra        | 20           | AND    | AD     | 西ヨーロッパ       | ISO 3166-2:AD
+ |アルバニア            | Albania        | 8            | ALB    | AL     | 東ヨーロッパ       | ISO 3166-2:AL
+ |アルメニア            | Armenia        | 51           | ARM    | AM     | 東ヨーロッパ       | ISO 3166-2:AM
+ |オーストリア          | Austria        | 40           | AUT    | AT     | 東ヨーロッパ       | ISO 3166-2:AT
+ |オーランド諸島        | Åland Islands  | 248          | ALA    | AX     | 北ヨーロッパ       | ISO 3166-2:AX
++-----------------------+----------------+--------------+--------+--------+--------------------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> LOAD DATA LOCAL INFILE  '/home/hadoopusr/CityList.csv' INTO TABLE  company_data FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE
+    -> exit
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'exit' at line 2
+mysql> LOAD DATA LOCAL INFILE  '/home/hadoopusr/CityList.csv' INTO TABLE  location_data FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
+Query OK, 116214 rows affected, 193 warnings (2.48 sec)
+Records: 116214  Deleted: 0  Skipped: 0  Warnings: 193
+
+mysql> select * from  location_data limit 5;
++---------+-----------------------+-------+--------+---------+------------+
+| id      | name                  | state | alpha2 | lon     | lat        |
++---------+-----------------------+-------+--------+---------+------------+
+ |3039162 | Sant Julià de Lòria   |       | AD     | 1.48247 | 42.462471
+ |3039163 | Sant Julià de Lòria   |       | AD     | 1.49129 | 42.463718
+  |039604 | Pas de la Casa        |       | AD     | 1.73361 | 42.54277
+  |039676 | Ordino                |       | AD     | 1.52573 | 42.59758
+ |3039678 | Ordino                |       | AD     | 1.53319 | 42.556229
++---------+-----------------------+-------+--------+---------+------------+
+5 rows in set (0.00 sec)
+
+mysql>
