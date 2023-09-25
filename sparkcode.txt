@@ -183,18 +183,9 @@ Spark context available as 'sc' (master = local[*], app id = local-1695362701883
 SparkSession available as 'spark'.
 >>> from pyspark.sql import SparkSession
 >>> from pyspark.sql.functions import col
->>> data = spark.read.option("header", "true").csv("hdfs://localhost:9000/user/hadoopusr/CreditCard.csv")
->>> data1 = spark.read.option("header", "true").csv("hdfs://localhost:9000/user/hadoopusr/CityList.csv")
->>> data2 = spark.read.option("header", "true").csv("hdfs://localhost:9000/user/hadoopusr/ CountryList.csv")
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "/home/hadoopusr/spark/python/pyspark/sql/readwriter.py", line 727, in csv
-    return self._df(self._jreader.csv(self._spark._sc._jvm.PythonUtils.toSeq(path)))
-  File "/home/hadoopusr/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
-  File "/home/hadoopusr/spark/python/pyspark/errors/exceptions/captured.py", line 175, in deco
-    raise converted from None
-pyspark.errors.exceptions.captured.AnalysisException: [PATH_NOT_FOUND] Path does not exist: hdfs://localhost:9000/user/hadoopusr/ CountryList.csv.
->>> data2 = spark.read.option("header", "true").csv("hdfs://localhost:9000/user/hadoopusr/CountryList.csv")
+>>> data =  spark.sql("SELECT * FROM frudtranction.transaction_data")
+>>> data1 =  spark.sql("SELECT * FROM frudtranction.company_data1")
+>>> data2 = spark.sql("SELECT * FROM frudtranction.location_data4")
 >>> data.show(5)
 23/09/22 11:36:44 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
 +----+------------+------------+-----------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------+-----+-------+
